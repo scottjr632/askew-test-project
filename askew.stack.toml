@@ -1,0 +1,29 @@
+name = "askew-test-project"
+
+[[services]]
+name = "mongo"
+kind = "managed"
+template_id = "mongo"
+
+[[services]]
+name = "users-service"
+kind = "container"
+dockerfile = "services/users-service/Dockerfile"
+relationship.MONGODB_URI = "mongo.MONGO_URL"
+
+[[services]]
+name = "projects-service"
+kind = "container"
+dockerfile = "services/projects-service/Dockerfile"
+relationship.MONGODB_URI = "mongo.MONGO_URL"
+
+[[services]]
+name = "gateway-service"
+kind = "container"
+language = "node"
+dockerfile = "services/gateway-service/Dockerfile"
+dev.path = "services/gateway-service"
+dev.install_command = "npm install"
+dev.start_dev_command = "npm start"
+relationship.USERS_SERVICE_URL = "users-service.RAILWAY_PRIVATE_DOMAIN"
+relationship.PROJECTS_SERVICE_URL = "projects-service.RAILWAY_PRIVATE_DOMAIN"

@@ -1,0 +1,17 @@
+node_modules/
+coverage/
+dist/
+.cache/
+.turbo/
+
+.env
+.env.*
+.DS_Store
+
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-error.log*
+
+.vscode/
+.idea/

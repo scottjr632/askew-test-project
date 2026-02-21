@@ -1,0 +1,99 @@
+:root {
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  color: #17242e;
+  background: linear-gradient(180deg, #f5fafc 0%, #f7f0e8 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.app-shell {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+  display: grid;
+  gap: 16px;
+}
+
+.panel {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid #d7e2e8;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.metrics {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.metric {
+  font-size: 2rem;
+  margin: 4px 0;
+}
+
+.status {
+  color: #35596b;
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.form {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+input,
+button {
+  border-radius: 8px;
+  border: 1px solid #b8c8d1;
+  font: inherit;
+  padding: 10px 12px;
+}
+
+button {
+  cursor: pointer;
+  border-color: #145e82;
+  background: #1d7aa8;
+  color: #fff;
+}
+
+button:disabled {
+  cursor: progress;
+  opacity: 0.7;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px;
+  border: 1px solid #e2eaef;
+  border-radius: 8px;
+  background: #fafcfd;
+}
+
+.error {
+  color: #9d1f1f;
+  font-weight: 600;
+}
