@@ -20,6 +20,9 @@ const projectsTarget = toHttpTarget(
 export default defineConfig({
   plugins: [react()],
   server: {
+    // Railway assigns external *.up.railway.app hosts at runtime.
+    // Allow all hosts so Vite doesn't block those requests.
+    allowedHosts: true,
     port: 3000,
     proxy: {
       "/api/user-health": {
