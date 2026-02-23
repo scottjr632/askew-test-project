@@ -25,5 +25,6 @@ dockerfile = "services/gateway-service/Dockerfile"
 dev.path = "services/gateway-service"
 dev.install_command = "npm install"
 dev.start_dev_command = "npm start"
+dev.preview_port = 3000
 relationship.USERS_SERVICE_URL = "users-service.RAILWAY_PRIVATE_DOMAIN"
 relationship.PROJECTS_SERVICE_URL = "projects-service.RAILWAY_PRIVATE_DOMAIN"
